@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> // Важливо для українських літер
+    <title>Моя перша A-Frame сцена</title>
+    <meta name="description" content="Базова сцена A-Frame до розділу 3.5">
+    <!-- Підключаємо бібліотеку A-Frame через CDN -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- Небо/фон (Розділ 3.2) -->
+        <a-sky color="grey"></a-sky>
+
+        <!-- Зелений тор (Розділ 3.3/3.4) -->
+        <a-torus position="-2 1 -5" color="green" radius="1.2"></a-torus>
+
+        <!-- Фіолетова площина (Розділ 3.4) -->
+        <a-plane width="7" height="7" rotation="-55 0 0"
+                 position="3 -2 -3" color="purple"></a-plane>
+
+        <!-- Жовтий циліндр-"льодяник" (Приклад з Розділу 3.4/3.5) -->
+        <a-cylinder color="yellow" height="2" radius="0.05"
+                    position="-2 -1 -5"></a-cylinder>
+
+        <!-- Синій циліндр-"льодяник" (Приклад з Розділу 3.4/3.5) -->
+        <a-cylinder color="blue" height="2" radius="0.05"
+                    position="-3 -1 -5"></a-cylinder>
+
+        <!-- Текст українською (Розділ 3.5). Використовуємо шрифт за замовчуванням -->
+        <!-- Важливо: для власного шрифту з кирилицею потрібні кроки з Розділу 3.6, але для завдання до 3.5 це не обов'язково -->
+        <a-text value="Вітаємо у браузерній VR!" color="black"
+                width="10" position="-0.5 1 -6" ></a-text>
+
+    </a-scene>
+</body>
+</html>
