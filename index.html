@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"> // Важливо для українських літер
-    <title>Моя перша A-Frame сцена</title>
-    <meta name="description" content="Базова сцена A-Frame до розділу 3.5">
-    <!-- Підключаємо бібліотеку A-Frame через CDN -->
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <meta charset="utf-8"> <!-- Важливо для кирилиці в тексті -->
+  <title>Моя перша A-Frame сцена</title>
+  <!-- Підключення бібліотеки A-Frame через CDN -->
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 </head>
 <body>
-    <a-scene>
-        <!-- Небо/фон (Розділ 3.2) -->
-        <a-sky color="grey"></a-sky>
+  <a-scene>
+    <!-- Сіре небо (фон) -->
+    <a-sky color="grey"></a-sky>
 
-        <!-- Зелений тор (Розділ 3.3/3.4) -->
-        <a-torus position="-2 1 -5" color="green" radius="1.2"></a-torus>
+    <!-- Зелений тор -->
+    <a-torus position="-2 1 -5" color="green" radius="1.2"></a-torus>
 
-        <!-- Фіолетова площина (Розділ 3.4) -->
-        <a-plane width="7" height="7" rotation="-55 0 0"
-                 position="3 -2 -3" color="purple"></a-plane>
+    <!-- Фіолетова площина (трохи повернута) -->
+    <a-plane width="7" height="7" rotation="-55 0 0"
+             position="-2 -1 -5" color="purple"></a-plane>
+             <!-- Змінено position, щоб було видно поруч з тором -->
 
-        <!-- Жовтий циліндр-"льодяник" (Приклад з Розділу 3.4/3.5) -->
-        <a-cylinder color="yellow" height="2" radius="0.05"
-                    position="-2 -1 -5"></a-cylinder>
+    <!-- Жовтий циліндр (як льодяник під тором) -->
+    <a-cylinder color="yellow" height="2" radius="0.05"
+                  position="-2 -0.5 -5"></a-cylinder>
+                  <!-- Змінено Y position, щоб було видно -->
 
-        <!-- Синій циліндр-"льодяник" (Приклад з Розділу 3.4/3.5) -->
-        <a-cylinder color="blue" height="2" radius="0.05"
-                    position="-3 -1 -5"></a-cylinder>
+    <!-- Синій циліндр (другий льодяник) -->
+    <a-cylinder color="blue" height="2" radius="0.05"
+                  position="-3 -0.5 -5"></a-cylinder>
+                  <!-- Змінено Y position, щоб було видно -->
 
-        <!-- Текст українською (Розділ 3.5). Використовуємо шрифт за замовчуванням -->
-        <!-- Важливо: для власного шрифту з кирилицею потрібні кроки з Розділу 3.6, але для завдання до 3.5 це не обов'язково -->
-        <a-text value="Вітаємо у браузерній VR!" color="black"
-                width="10" position="-0.5 1 -6" ></a-text>
+    <!-- Помаранчевий тор-вузол -->
+    <a-torus-knot color="orange" radius="1.2" position="-3 1 -5"></a-torus-knot>
 
-    </a-scene>
+    <!-- Простий текст (введений в кінці п. 3.5) -->
+    <a-text value="Vitayemo u A-Frame!" color="black" width="10"
+            position="-0.5 1 -4"></a-text>
+            <!-- Змінено position, щоб текст було видно -->
+
+  </a-scene>
 </body>
 </html>
